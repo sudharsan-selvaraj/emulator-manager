@@ -2,7 +2,11 @@
   "name": "simcode",
   "displayName": "SimCode",
   "description": "VS code extension to Manage android emulator and ios simulators",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudharsan-selvaraj/simcode.git"
+  },
   "engines": {
     "vscode": "^1.76.0"
   },
