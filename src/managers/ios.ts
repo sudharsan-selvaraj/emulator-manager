@@ -4,6 +4,7 @@ import { Device, DeviceState } from '../models/device';
 import { DeviceManager } from './device-manager';
 import SimCtl from 'node-simctl';
 import _ from 'lodash';
+import { execSync } from 'child_process';
 
 export class IosDeviceManager extends DeviceManager {
   private simctl: any;
@@ -35,6 +36,7 @@ export class IosDeviceManager extends DeviceManager {
       });
 
       await simclt.bootDevice();
+      execSync('open -a simulator');
       return [true, undefined];
     } catch (err) {
       return [false, err as Error];

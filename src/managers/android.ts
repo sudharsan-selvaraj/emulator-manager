@@ -63,7 +63,8 @@ export class AndroidDeviceManager extends DeviceManager {
       { encoding: 'utf8' }
     )
       .replace(/\n$/, '')
-      .split('\n');
+      .split('\n')
+      .filter((line) => !line.startsWith('INFO'));
 
     return await Promise.all(
       emulators
